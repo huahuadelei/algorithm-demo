@@ -254,7 +254,7 @@ public class HashMap<K, V> implements Map<K, V> {
         }
 
         Set<String> keySet = map.keySet();
-        System.out.println(Arrays.toString(keySet.toArray(new String[0])));;
+        System.out.println(Arrays.toString(keySet.toArray(new String[0])));
 
         for (String key : keySet) {
             System.out.printf("k=%s,v=%s\n",key,map.get(key));
