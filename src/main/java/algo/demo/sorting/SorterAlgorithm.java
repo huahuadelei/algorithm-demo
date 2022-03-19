@@ -8,6 +8,6 @@ public enum SorterAlgorithm {
     SHELL, // 希尔排序
     QUICK, // 快速排序
     MERGING,// 归并排序
-
+    CARDINAL // 基数排序
 
 }

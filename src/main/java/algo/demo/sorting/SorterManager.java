@@ -16,6 +16,7 @@ public class SorterManager {
         ALGORITHM_ARRAY_SORTER_MAP.put(SorterAlgorithm.SHELL, new ShellArraySorter());
         ALGORITHM_ARRAY_SORTER_MAP.put(SorterAlgorithm.QUICK, new QuickArraySorter());
         ALGORITHM_ARRAY_SORTER_MAP.put(SorterAlgorithm.MERGING, new MergingArraySorter());
+        ALGORITHM_ARRAY_SORTER_MAP.put(SorterAlgorithm.CARDINAL, new CardinalArraySorter());
     }
 
     public static int[] sort(SorterAlgorithm algorithm, int[] arr) {
