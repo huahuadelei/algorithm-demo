@@ -1,12 +1,12 @@
 package algo.demo.sorting;
 
-import algo.demo.map.HashMap;
+import algo.demo.map.JDK7HashMap;
 import algo.demo.map.Map;
 import algo.demo.sorting.sorter.*;
 
 public class SorterManager {
 
-    static final Map<SorterAlgorithm, ArraySorter> ALGORITHM_ARRAY_SORTER_MAP = new HashMap<>(7);
+    static final Map<SorterAlgorithm, ArraySorter> ALGORITHM_ARRAY_SORTER_MAP = new JDK7HashMap<>(7);
 
     static {
         // 注册算法

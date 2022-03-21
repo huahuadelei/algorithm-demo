@@ -12,7 +12,7 @@ import java.util.function.BiConsumer;
  * 2 使用数组，涉及到扩容问题
  * 3 综合使用数组+链表的方式
  */
-public class HashMap<K, V> implements Map<K, V> {
+public class JDK7HashMap<K, V> implements Map<K, V> {
 
     private static final float CAPACITY_DIVISOR = 0.75F;
     private static final int MIN_CAP_SIZE = 10;
@@ -21,7 +21,7 @@ public class HashMap<K, V> implements Map<K, V> {
     private int size;
 
 
-    public HashMap(int initCap) {
+    public JDK7HashMap(int initCap) {
         this.elements = new Node[Math.max(MIN_CAP_SIZE, initCap)];
     }
 
@@ -237,7 +237,7 @@ public class HashMap<K, V> implements Map<K, V> {
     }
 
     public static void main(String[] args) {
-        Map<String, Object> map = new HashMap<String, Object>(10);
+        Map<String, Object> map = new JDK7HashMap<String, Object>(10);
 
         map.put("name", "张三");
         map.put("name", "李四");

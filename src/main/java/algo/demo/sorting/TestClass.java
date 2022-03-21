@@ -7,14 +7,14 @@ import java.util.Random;
 public class TestClass {
 
     public static void main(String[] args) {
-        int[] arr = {101, 3, 14, 804,44456, 5,22, 620,58 ,91,7};
+//        int[] arr = {101, 3, 14, 804,44456, 5,22, 620,58 ,91,7};
 
-//        Random random = new Random();
-//
-//        int[] arr = new int[9000000];
-//        for (int i = 0; i < arr.length; i++) {
-//            arr[i] = random.nextInt(Integer.MAX_VALUE);
-//        }
+        Random random = new Random();
+
+        int[] arr = new int[9000000];
+        for (int i = 0; i < arr.length; i++) {
+            arr[i] = random.nextInt(Integer.MAX_VALUE);
+        }
 
 //        int[] c1 = arr.clone();
 //        printTimes("插入排序",() -> {
@@ -41,7 +41,7 @@ public class TestClass {
         printTimes("快速排序", () -> {
             SorterManager.sort(SorterAlgorithm.QUICK, clone2);
         });
-        System.out.println(Arrays.toString(clone2));
+//        System.out.println(Arrays.toString(clone2));
 
 
 //        final int[] clone3 = arr.clone();
@@ -55,7 +55,7 @@ public class TestClass {
             SorterManager.sort(SorterAlgorithm.CARDINAL, clone4);
         });
 
-        System.out.println(Arrays.toString(clone4));
+//        System.out.println(Arrays.toString(clone4));
     }
 
     public static void printTimes(String title, Runnable runnable) {

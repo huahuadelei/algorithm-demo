@@ -42,10 +42,10 @@ public class QuickArraySorter implements ArraySorter {
             arr[l] = arr[r];
             arr[r] = temp;
 
+
             if (arr[l] == mid) {
                 r--;
-            }
-            if(arr[r] == mid){
+            }else if(arr[r] == mid){
                 l++;
             }
         }
