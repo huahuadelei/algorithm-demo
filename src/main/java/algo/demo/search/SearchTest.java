@@ -4,6 +4,7 @@ import algo.demo.search.api.SearchAPI;
 import algo.demo.search.api.impl.BinarySearch;
 import algo.demo.search.api.impl.InsertBinarySearch;
 import algo.demo.search.api.impl.SimpleSearch;
+import algo.demo.search.api.impl.WhileBinarySearch;
 import algo.demo.sorting.SorterAlgorithm;
 import algo.demo.sorting.SorterManager;
 
@@ -19,7 +20,7 @@ public class SearchTest {
         HashSet<Integer> integers = new HashSet<>();
         Random random = new Random();
 
-        int[] arr = new int[9999999];
+        int[] arr = new int[20];
         for (int i = 0; i < arr.length; i++) {
             do {
                 arr[i] = random.nextInt(Integer.MAX_VALUE);
@@ -34,7 +35,7 @@ public class SearchTest {
 
 //        // 取一个索引位让下面算法进行查找
 //
-        int target = arr[8888];
+        int target = arr[15];
         System.out.println("target ==> "+target);
 //
 //        // 简单查询
@@ -54,6 +55,11 @@ public class SearchTest {
         SearchAPI insertBinarySearch = new InsertBinarySearch();
         printTimes("插值法二分查找",()->{
             System.out.println(insertBinarySearch.search(arr, target));
+        });
+        // 简单查询
+        SearchAPI whileBinarySearch = new WhileBinarySearch();
+        printTimes("非递归二分查找",()->{
+            System.out.println(whileBinarySearch.search(arr, target));
         });
     }
 

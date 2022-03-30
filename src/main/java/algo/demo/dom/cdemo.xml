@@ -1,0 +1,29 @@
+<config>
+
+    <properties>
+        <property name="threadNum">10</property>
+        <property name="isConcurrent" value="false"></property>
+    </properties>
+
+    <sqls>
+        <sql name="sql01">
+            select * from user where name=#{name}
+        </sql>
+
+        <sql name="sql02">
+            select * from user
+            <where>
+                <if test="age != null ">
+                    and age=#{age}
+                </if>
+                <if test="sex != null and flag ">
+                    and sex=#{sex}
+                </if>
+                <if test="name != null">
+                    and name like '%${name}%'
+                </if>
+            </where>
+            order by time desc
+        </sql>
+    </sqls>
+</config>

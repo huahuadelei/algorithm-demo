@@ -1,7 +1,5 @@
 package algo.demo.sorting;
 
-import javax.xml.transform.Source;
-import java.util.Arrays;
 import java.util.Random;
 
 public class TestClass {
@@ -11,7 +9,7 @@ public class TestClass {
 
         Random random = new Random();
 
-        int[] arr = new int[9000000];
+        int[] arr = new int[9999999];
         for (int i = 0; i < arr.length; i++) {
             arr[i] = random.nextInt(Integer.MAX_VALUE);
         }

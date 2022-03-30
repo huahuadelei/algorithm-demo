@@ -163,11 +163,11 @@ public class RSAUtils {
 
         //------------------------------------------------------------
 
-        // 公钥加密
+        // 私钥加密
         byte[] encrypt2 = encrypt(content.getBytes(), privateKeyObj);
         System.out.printf("\n私钥加密后 =>  %s\n",Base64.getEncoder().encodeToString(encrypt));
 
-        //私钥解密
+        //公钥解密
         byte[] decrypt2 = decrypt(encrypt2, publicKeyObj);
         System.out.println("公钥解密后 =>"+new String(decrypt2));
 
